@@ -1,22 +1,25 @@
-import { ChevronFirst, ChevronLast, MoreVertical } from 'lucide-react';
+import { ChevronFirst, ChevronLast, MoreVertical, LifeBuoy, Boxes, Package, UserCircle, BarChart3, LayoutDashboard, Settings } from 'lucide-react';
 import { createContext, useContext, useState } from 'react';
 import cryptX from '../assets/cryptX.png';
+import { FiPieChart, FiRepeat, FiMail, FiLogOut, FiX } from "react-icons/fi";
+import { AiFillAppstore } from "react-icons/ai";
+import { Wallet } from "lucide-react";
+
+
 
 const SidebarContext = createContext();
 
-export default function Sidebar({ children }) {
+export default function Sidebar() {
   const [expanded, setExpanded] = useState(true);
 
   return (
-    <aside className="h-screen">
-      <nav className="h-full flex w-[15%] flex-col bg-white border-r shadow-sm">
+    <aside>
+      <nav className="h-full min-h-full flex flex-col bg-[#F4F5FA] border-r shadow-sm ">
         {/* Top Section */}
         <div className="p-4 pb-2 flex justify-between items-center">
           <img
             src={cryptX}
-            className={`overflow-hidden transition-all ${
-              expanded ? 'w-32' : 'w-0'
-            }`}
+            className={`overflow-hidden transition-all ${expanded ? 'w-32' : 'w-0'}`}
             alt="logo"
           />
           <button
@@ -27,12 +30,20 @@ export default function Sidebar({ children }) {
           </button>
         </div>
 
+        
+
         {/* Sidebar items */}
         <SidebarContext.Provider value={{ expanded }}>
-          <ul className="flex-1 px-3">{children}</ul>
+          <ul className="flex-1 px-3">
+            <SidebarItem icon={<AiFillAppstore size={20} />} text="Overview" active alert/>
+            <SidebarItem icon={<FiPieChart size={20} />} text="Charts" />
+            <SidebarItem icon={<FiRepeat size={20} />} text="Transactions" />
+            <SidebarItem icon={<Wallet size={20} />} text="Wallet"  />
+            <SidebarItem icon={<FiMail size={20} />} text="Mail Box" />
+            <SidebarItem icon={<Settings size={20} />} text="Settings" />
+            <SidebarItem icon={<FiLogOut size={20} />} text="Logout" />
+          </ul>
         </SidebarContext.Provider>
-
-        
       </nav>
     </aside>
   );
@@ -52,18 +63,14 @@ export function SidebarItem({ icon, text, active, alert }) {
     >
       {icon}
       <span
-        className={`overflow-hidden transition-all ${
-          expanded ? 'w-52 ml-3' : 'w-0'
-        }`}
+        className={`overflow-hidden transition-all ${expanded ? 'w-52 ml-3' : 'w-0'}`}
       >
         {text}
       </span>
 
       {alert && (
         <div
-          className={`absolute right-2 w-2 h-2 rounded bg-indigo-400 ${
-            expanded ? '' : 'top-2'
-          }`}
+          className={`absolute right-2 w-2 h-2 rounded bg-indigo-400 ${expanded ? '' : 'top-2'}`}
         />
       )}
 
