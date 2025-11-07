@@ -2,7 +2,7 @@ import React from 'react'
 import { CiBellOn } from "react-icons/ci";
 import { CiCircleQuestion } from "react-icons/ci";
 import { FiSearch, FiChevronDown } from 'react-icons/fi';
-import avatar from '../assets/avatar.png';
+import avatar from '../assets/Avatar.png';
 
 export default function Header() {
   return (
