@@ -1,1 +1,52 @@
 @import "tailwindcss"; 
+
+.LiveMarket {
+    width: 121px;
+    height: 32px;
+    opacity: 1;
+    color: black;
+    font-size: 21px;
+}
+
+.Change {
+    width: 104px;
+    height: 18px;
+    top: 58px;
+    left: 236px;
+    opacity: 0.8;
+    color: #9E9E9E;
+}
+
+.Price {
+     width: 104px;
+    height: 18px;
+    top: 58px;
+    left: 236px;
+    
+
+}
+.Header {
+    width: 1098px;
+    height: 73.0000991821289px;
+    top: 32px;
+    left: 302px;
+    opacity: 1;
+}
+
+.Search {
+    width: 355px;
+    height: 40px;
+    opacity: 1;
+    border-width: 1px;
+    border-radius: 10px;
+
+
+}
+.Statistics {
+    width: 534px;
+    height: 534px;
+    top: 149px;
+    left: 863px;
+    opacity: 1;
+
+};
