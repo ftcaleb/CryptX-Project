@@ -4,7 +4,7 @@ import Pattern from "../assets/Pattern.png";
 import Ygraph from "../assets/Ygraph.png"
 import Ggraph from "../assets/Ggraph.png"
 import Bitcoin from '../assets/BitLogo.png';
-import Litecoin from "../assets/litelogo.png"
+import Litecoin from "../assets/Litelogo.png"
 import Cardano from "../assets/CardanoLogo.png"
 
 
