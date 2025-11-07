@@ -18,15 +18,15 @@ export default function Header() {
           <FiSearch className="absolute mr-3 right-3 text-gray-400 outline-none" />
         </div>
 
-
+      {/* Bell Icon and Circle question icon */}
       <div className="flex items-center gap-6">
         <CiBellOn size={35} />
         <CiCircleQuestion size={35} />
 
         <div className='flex flex-end items-center gap-3 p-1 ml-45'>
-
+          {/* Avatar Image */}
           <img src={avatar} alt="User Avatar" className="w-9 h-9 rounded-full mb-1" />
-
+          {/* Opened div for profile */}
           <div className="flex flex-col">
             <p className="">Laurice</p>
             <p className="text-sm text-gray-500">Laurice@11</p>

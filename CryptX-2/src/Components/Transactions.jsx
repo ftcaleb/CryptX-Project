@@ -3,6 +3,7 @@ import Ticon from '../assets/Ticon.png'
 import Bicon from '../assets/Bicon.png'
 
 function Transactions() {
+  // opened array for transaction information
     const transactions = [
         {
             logo: Ticon,
@@ -44,10 +45,10 @@ function Transactions() {
           key={index}
           className="grid grid-cols-[auto_1fr_auto_auto_1fr] gap-x-4 items-end"
         >
-          {/* Market Logo image */}
+          {/* Transaction Logo image */}
           <img src={transaction.logo} alt={transaction.name} className="w-[40px] h-[40px] " />
           
-          {/* Targets Logo name and Market symbol ensuring that they are placed accordingly */}
+          {/* Targets Logo name and Transactions symbol ensuring that they are placed accordingly */}
           <div>
             <p className="font-semibold text-#0000">{transaction.name}</p>
             <p className="Change">{transaction.take}</p>
@@ -63,17 +64,7 @@ function Transactions() {
            
           </div>
 
-          {/* Targets the price and ensures that they are on the left */}
-          {/* <div className='text-left ml-10'>
-            <p className='Change'>Price</p>
-            <p className="Price font-semibold">{transaction.price}</p>
-            
-          </div> */}
           
-          {/* Graph image */}
-          {/* <div className='ml-10'>
-            <img src={transaction.image} alt={transaction.name} />
-          </div> */}
         
           
         </div>

@@ -10,6 +10,7 @@ import TrendR from "../assets/TrendR.svg"
 
 
 export default function Card() {
+  // Array of objects are created
   const cards = [
     {
       name: "Bitcoin",
@@ -47,11 +48,11 @@ export default function Card() {
   ];
 
   return (
-    <div className="grid grid-cols-2 items-start gap-5 p-6">
+    <div className="grid grid-cols-2 sm:grid-rows-1 items-start gap-5 p-6">
       {cards.map((card, index) => (
         <div
           key={index}
-          className="bg-white  rounded-2xl p-6   h-full shadow-md"
+          className="bg-white rounded-2xl p-6 h-full shadow-md"
         >
 
              {/* Coin image */}
@@ -68,6 +69,7 @@ export default function Card() {
             >
               
             </div>
+            {/* up and down icons */}
             <img src={card.icon} alt={card.name} />
             <p
               className={`text-sm font-semibold ${
@@ -76,6 +78,7 @@ export default function Card() {
                   : "text-green-500"
               }`}
             >
+              {/* Trend Value */}
               {card.trend}
             </p>
           </div>
